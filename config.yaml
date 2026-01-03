@@ -1,0 +1,81 @@
+ai_system:
+  name: "Local AI Assistant"
+  version: "0.1.0"
+
+# Coding Module Configuration
+coding:
+  enabled: true
+  model:
+    # Use free, locally-runnable models
+    name: "codellama"
+    path: "models/codellama-7b-instruct.gguf"
+    context_length: 4096
+  features:
+    - code_generation
+    - code_review
+    - debugging
+    - refactoring
+  languages:
+    - python
+    - javascript
+    - java
+    - cpp
+    - rust
+    - go
+
+# Vision Module Configuration
+vision:
+  enabled: true
+  model:
+    name: "llava"
+    path: "models/llava-v1.5-7b.gguf"
+  features:
+    - image_understanding
+    - object_detection
+    - scene_description
+    - ocr
+  input_sources:
+    - screenshot
+    - webcam
+    - file
+
+# Voice Module Configuration
+voice:
+  enabled: true
+  speech_recognition:
+    engine: "whisper"
+    model: "base"
+    language: "en"
+  text_to_speech:
+    engine: "coqui-tts"
+    model: "tts_models/en/ljspeech/tacotron2-DDC"
+    voice_speed: 1.0
+  wake_word: "assistant"
+
+# Task Automation Module Configuration
+automation:
+  enabled: true
+  safety:
+    confirm_actions: true
+    restricted_operations:
+      - file_deletion
+      - system_shutdown
+  capabilities:
+    - mouse_control
+    - keyboard_input
+    - window_management
+    - process_management
+    - file_operations
+
+# API Configuration
+api:
+  host: "127.0.0.1"
+  port: 8000
+  enable_web_ui: true
+
+# System Resources
+resources:
+  max_memory_gb: 8
+  cpu_threads: 4
+  gpu_enabled: false
+  gpu_layers: 0

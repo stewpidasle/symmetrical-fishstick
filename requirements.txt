@@ -1,0 +1,38 @@
+# Core AI Libraries
+transformers>=4.35.0
+torch>=2.0.0
+accelerate>=0.24.0
+
+# Vision
+opencv-python>=4.8.0
+pillow>=10.0.0
+sentence-transformers>=2.2.0
+
+# Voice
+sounddevice>=0.4.6
+soundfile>=0.12.1
+pydub>=0.25.1
+SpeechRecognition>=3.10.0
+TTS>=0.20.0
+
+# Computer Automation
+pyautogui>=0.9.54
+keyboard>=0.13.5
+mouse>=0.7.1
+psutil>=5.9.0
+
+# Code Processing
+tree-sitter>=0.20.0
+black>=23.0.0
+autopep8>=2.0.0
+
+# API and Utilities
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+pyyaml>=6.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Local LLM Support
+llama-cpp-python>=0.2.0
